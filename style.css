@@ -29,9 +29,10 @@ body header #button-menu {
     display: flex;
     gap: 30px;
     align-items: center;
+    background-color: #F5EDE2;
 }
 
-body header .button-menu-style {
+body .button-menu-style {
     background-color: #F5EDE2;
     border: 1px solid #FE6C3B;
     width: 120px;
@@ -40,4 +41,52 @@ body header .button-menu-style {
     gap: 50px;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
+}
+
+body main {
+    display: flex;
+    justify-content: center;
+}
+
+body main section {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    gap: 40PX;
+    align-items: center;
+}
+
+body main section #meme-container {
+    width: 500px;
+    height: 500px;
+    border: #FE6C3B 1px solid;
+    display: flex;
+    flex-direction: column;
+}
+
+body main section .button-download-style {
+    background-color: #FE6C3B;
+    width: 300px;
+    height: 40px;
+    border: none;
+    border-radius: 20px;
+    gap: 50px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    color: #F5EDE2;
+}
+
+body main section #meme-container .text-style {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    text-align: center;
+    height: 15%;
+    margin: auto;
+    padding: 30px;
+}
+
+body main section #meme-container #img-container {
+    height: 70%;
+    background-color: #140D02;
 }
