@@ -30,13 +30,77 @@
         </section>       
     </main>
     <aside class="aside image">
-        <h2>Imagen</h2>
-        <div>
+        <div class="panel-ctrl">
+            <h2>IMAGEN</h2>
             <form action="">
 
-                
+                <div class="container-input">
+                    <label>URL</label>
+                    <input class="input-text" id="url" name="url" type="url"/>
+                </div>
+
+                <div class="container-input-color">
+                    <label>FONDO</label>
+                    <div>
+                        <input class="color-pick" id="color" name="color" type="color"/>
+                        <span>#FFFFF</span>
+                        <select name="modo-fusion" id="modo-fusion">
+                            <option value="ninguno">Ninguno</option>
+                            <option value="aclarar">Aclarar</option>
+                            <option value="oscurecer">Oscurecer</option>
+                            <option value="diferencia">Diferencia</option>
+                            <option value="luminosidad">Luminosidad</option>
+                            <option value="multiplicar">Multiplicar</option>
+                        </select>
+                    </div>
+                    
+                </div>
+
+                <div class="container-filters">
+
+                    <div class="style-filters">
+                        <label for="">BRILLO</label>
+                        <input class="style-range" type="range" name="brillo" id="brillo">
+                    </div>
+                    
+                    <div class="style-filters">
+                        <label for="">OPACIDAD</label>
+                        <input class="style-range" type="range" name="opacidad" id="opacidad">
+                    </div>
+                    
+                    <div class="style-filters">
+                        <label for="">CONTRASTE</label>
+                        <input class="style-range" type="range" name="contraste" id="contraste">
+                    </div>
+
+                    <div class="style-filters">
+                        <label for="">DESENFOQUE</label>
+                        <input class="style-range" type="range" name="desenfoque" id="desenfoque">
+                    </div>
+                    
+                    <div class="style-filters">
+                        <label for="">ESCALA DE GRISES</label>
+                        <input class="style-range" type="range" name="grises" id="grises">
+                    </div>
+                    
+                    <div class="style-filters">
+                        <label for="">SEPIA</label>
+                        <input class="style-range" type="range" name="sepia" id="sepia">
+                    </div>
+                   
+                    <div class="style-filters">
+                        <label for="">HUE</label>
+                        <input class="style-range" type="range" name="hue" id="hue">
+                    </div>
+
+                    <div class="style-filters">
+                        <label for="">NEGATIVO</label>
+                        <input class="style-range" type="range" name="negativo" id="negativo">
+                    </div>
+                </div>
+
             </form>
-        </div>
+        </div>  
     </aside>
     <aside class="aside text"></aside>
     <script></script>
