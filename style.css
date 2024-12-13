@@ -5,6 +5,17 @@ body {
     border: 1px solid #FE6C3B;
 }
 
+h1 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-size: 50px;
+    width: 20%;
+    line-height: 1;
+    margin: auto 0;
+    padding-left: 50px;
+}
+
+
 h2 {
     font-family: "Poppins", sans-serif;
     font-weight: 600;
@@ -16,21 +27,12 @@ h2 {
 body header {
     width: 100%;
     height: 120px;
-    background-color: #F5EDE2;
+    background-color: #CCDCF6;
     border: 1px solid #FE6C3B;
     display: flex;
     padding: 40px 0px 40px 0px;
 }
 
-h1 {
-    font-family: "Poppins", sans-serif;
-    font-weight: 800;
-    font-size: 50px;
-    width: 20%;
-    line-height: 1;
-    margin: auto 0;
-    padding-left: 50px;
-}
 
 body header .divider {
     width: 10%;
@@ -41,7 +43,6 @@ body header #button-menu {
     display: flex;
     gap: 30px;
     align-items: center;
-    background-color: #F5EDE2;
 }
 
 body .button-menu-style {
