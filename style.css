@@ -217,3 +217,19 @@ body .aside .panel-ctrl form .container-filters .style-filters .style-range::-we
 body .aside .panel-ctrl form .container-filters .style-filters .style-range::-webkit-slider-thumb {
     background: #CCDCF6;
 }
+
+body .aside .panel-ctrl .button-style-aside {
+    background-color: #F5EDE2;
+    border: 1px solid #FE6C3B;
+    width: 200px;
+    height: 40px;
+    border-radius: 20px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    margin-top: 50px;
+}
+
+body .aside .panel-ctrl .button-style-aside:hover {
+    background-color: #FE6C3B;
+    color: #F5EDE2;
+}
