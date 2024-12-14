@@ -5,7 +5,10 @@ window.onload = () => {
 const $ = element => document.querySelector(element)
 
 const $inputUrl = $("#url")
+const $imgContainer = $("#img-container")
+const $inputColor = $("#color")
 const $colorValue = $("#color-value")
+const $blendModeSelect = $("#blend-mode-select")
 const $inputBrillo = $("#brillo")
 const $inputOpacidad = $("#opacidad")
 const $inputConstraste = $("#contraste")
@@ -16,18 +19,18 @@ const $inputHue = $("#hue")
 const $inputSaturacion = $("#saturacion")
 const $inputNegativo = $("#negativo")
 const $buttonReset = $("#reset")
-const $inputColor = $("#color")
-const $imgPreview = $("#img-preview")
-const $imgContainer = $("#img-container")
-const $buttonDownload = $(".button-download-style")
-const $memeContainer = $("#meme-container")
 const $topText =$("#top-text")
 const $bottomText =$("#bottom-text")
+const $memeContainer = $("#meme-container")
+const $buttonDownload = $(".button-download-style")
 
- 
+
+
+//---------------------------- input ingresar imagen --------------------------------- -------------------
+
 $inputUrl.addEventListener("input", () => {
     console.log($inputUrl.value)
-   $imgContainer.style.backgroundImage = $inputUrl.value
+    $imgContainer.style.backgroundImage = `url(${$inputUrl.value})`
 })
 
 //---------------------------- input seleccionar color --------------------------------- -------------------
@@ -38,9 +41,21 @@ $inputColor.addEventListener("input", () => {
     console.log ($inputColor.value)
 })
 
-//---------------------------- fin codigo seleccionar color --------------------------------- -------------------
+//---------------------------- input blend mode --------------------------------- -------------------
 
+$blendModeSelect.addEventListener("input", () => {
+    console.log ($blendModeSelect.value)
+    $imgContainer.style.backgroundBlendMode = $blendModeSelect.value
+})
    
+
+
+
+
+
+
+
+
 // ------------------------codigo para descargar imagen---------------------------
 
 $buttonDownload.addEventListener("click", () => {
