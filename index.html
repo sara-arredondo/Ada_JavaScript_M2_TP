@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
     <title>Generador de Memes</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,9 +24,9 @@
     <main>
         <section>
             <div id="meme-container">
-                <p class="text-style top">TOP TEXT</p>               
+                <p id="top-text" class="text-style top">TOP TEXT</p>               
                 <div id="img-container"></div>
-                <p class="text-style bottom">BOTTOM TEXT</p>
+                <p id="bottom-text" class="text-style bottom">BOTTOM TEXT</p>
             </div>
             <button class="button-download-style">DESCARGAR IMAGEN</button>
         </section>       
@@ -43,7 +45,7 @@
                     <label>FONDO</label>
                     <div>
                         <input class="color-pick" id="color" name="color" type="color"/>
-                        <span>#FFFFF</span>
+                        <span id="color-value">#FFFFF</span>
                         <select name="modo-fusion" id="modo-fusion">
                             <option value="ninguno">Ninguno</option>
                             <option value="aclarar">Aclarar</option>
