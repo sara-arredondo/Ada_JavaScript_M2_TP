@@ -79,6 +79,8 @@ function valoresMin() {
     $inputNegativo.min = "0"
 }
 
+valoresMin()
+
 // ------------------------inicio codigo para definir valores maximos---------------------------
 
 function valoresMax() {
@@ -91,7 +93,9 @@ function valoresMax() {
     $inputHue.max = "359"
     $inputSaturacion.max = "1000"
     $inputNegativo.max = "1"
+}
 
+valoresMax()
 
 // --------------------  inicio codigo para funcion de reestablecer valores----------------------------
 
