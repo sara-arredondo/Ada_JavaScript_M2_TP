@@ -48,6 +48,7 @@ $blendModeSelect.addEventListener("input", () => {
     $imgContainer.style.backgroundBlendMode = $blendModeSelect.value
 })
    
+//---------------------------- input filtros --------------------------------- -------------------
 
 
 
@@ -64,8 +65,32 @@ $buttonDownload.addEventListener("click", () => {
       });
 })
 
-// ------------------------fin codigopara descargar imagen---------------------------
+// ------------------------inicio codigo para definir valores minimos---------------------------
 
+function valoresMin() {
+    $inputBrillo.min = "0"
+    $inputOpacidad.min = "0"
+    $inputConstraste.min = "100"
+    $inputDesenfoque.min = "0"
+    $inputGrises.min = "0"
+    $inputSepia.min = "0"
+    $inputHue.min = "0"
+    $inputSaturacion.min = "100"
+    $inputNegativo.min = "0"
+}
+
+// ------------------------inicio codigo para definir valores maximos---------------------------
+
+function valoresMax() {
+    $inputBrillo.max = "1"
+    $inputOpacidad.max= "1"
+    $inputConstraste.max = "1000"
+    $inputDesenfoque.max = "10"
+    $inputGrises.max = "100"
+    $inputSepia.max = "100"
+    $inputHue.max = "359"
+    $inputSaturacion.max = "1000"
+    $inputNegativo.max = "1"
 
 
 // --------------------  inicio codigo para funcion de reestablecer valores----------------------------
