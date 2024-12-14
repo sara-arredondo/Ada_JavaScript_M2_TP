@@ -48,13 +48,32 @@ $blendModeSelect.addEventListener("input", () => {
     $imgContainer.style.backgroundBlendMode = $blendModeSelect.value
 })
    
-//---------------------------- input filtros --------------------------------- -------------------
+//---------------------------- inputs filtros --------------------------------- -------------------
 
+$inputBrillo.addEventListener("input", () => {
+    console.log ($inputBrillo.value)
+    $imgContainer.style.filter = `brightness(${$inputBrillo.value})`
+})
 
+$inputOpacidad.addEventListener("input", () => {
+    console.log ($inputOpacidad.value)
+    $imgContainer.style.filter = `opacity(${$inputOpacidad.value})`
+})
 
+$inputConstraste.addEventListener("input", () => {
+    console.log ($inputConstraste.value)
+    $imgContainer.style.filter = `contrast(${$inputConstraste.value})`
+})
 
+$inputDesenfoque.addEventListener("input", () => {
+    console.log ($inputDesenfoque.value)
+    $imgContainer.style.filter = `blur(${$inputDesenfoque.value})`
+})
 
-
+$inputGrises.addEventListener("input", () => {
+    console.log ($inputGrises.value)
+    $imgContainer.style.filter = `grayscale(${$inputGrises.value})`
+})
 
 
 // ------------------------codigo para descargar imagen---------------------------
