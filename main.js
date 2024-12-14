@@ -4,7 +4,8 @@ window.onload = () => {
 
 const $ = element => document.querySelector(element)
 
-const $colorValue = $("color-value")
+const $inputUrl = $("#url")
+const $colorValue = $("#color-value")
 const $inputBrillo = $("#brillo")
 const $inputOpacidad = $("#opacidad")
 const $inputConstraste = $("#contraste")
@@ -16,19 +17,29 @@ const $inputSaturacion = $("#saturacion")
 const $inputNegativo = $("#negativo")
 const $buttonReset = $("#reset")
 const $inputColor = $("#color")
+const $imgPreview = $("#img-preview")
 const $imgContainer = $("#img-container")
 const $buttonDownload = $(".button-download-style")
 const $memeContainer = $("#meme-container")
 const $topText =$("#top-text")
 const $bottomText =$("#bottom-text")
 
+ 
+$inputUrl.addEventListener("input", () => {
+    console.log($inputUrl.value)
+   $imgContainer.style.backgroundImage = $inputUrl.value
+})
+
 //---------------------------- input seleccionar color --------------------------------- -------------------
 
 $inputColor.addEventListener("input", () => {
     $imgContainer.style.backgroundColor = $inputColor.value
-    //$colorValue.innerText = $inputColor.value
+    $colorValue.innerText = $inputColor.value
     console.log ($inputColor.value)
 })
+
+//---------------------------- fin codigo seleccionar color --------------------------------- -------------------
+
    
 // ------------------------codigo para descargar imagen---------------------------
 
@@ -37,6 +48,10 @@ $buttonDownload.addEventListener("click", () => {
         saveAs(blob, "mi-primer-meme.png");
       });
 })
+
+// ------------------------fin codigopara descargar imagen---------------------------
+
+
 
 // --------------------  inicio codigo para funcion de reestablecer valores----------------------------
 

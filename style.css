@@ -111,8 +111,15 @@ body main section #meme-container .text-style {
 body main section #meme-container #img-container {
     height: 70%;
     border: #FE6C3B 1px solid;
-     cursor: pointer;
+    cursor: pointer;
 }
+
+body main section #meme-container #img-container .img-preview {
+    height: 70%;
+    border: #FE6C3B 1px solid;
+    cursor: pointer;
+}
+
 
 body aside {
     width: 18%;
