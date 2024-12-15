@@ -1,9 +1,19 @@
+.modo-claro {
+    --colorFondo: #F5EDE2;
+}
+
+.modo-oscuro {
+    --colorFondo: #191B1E;
+}
+
 body {
-    background-color: #F5EDE2;
+    background-color: var(--colorFondo);
     margin: 0;
     height: 100vh;
     border: 1px solid #FE6C3B;
 }
+
+
 
 h1 {
     font-family: "Poppins", sans-serif;

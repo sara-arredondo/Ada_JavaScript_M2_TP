@@ -1,6 +1,25 @@
 window.onload = () => {
 
-// ------------------ definicion de variables y query selector-------------------
+// ---------------------------inicio codigo modo claro y modo oscuro---------------------------------------
+
+const $body = document.querySelector("body")
+
+if($body.classList.contains("modo-claro")) {
+    $body.classList.remove("modo-claro")
+    $body.classList.add("modo-oscuro")
+} else {
+    $body.classList.remove("modo-oscuro")
+    $body.classList.add("modo-claro")
+}
+
+
+///$modoClaroOscuro.addEventListener("click", () => {
+    
+//})
+
+
+
+// ------------------ definicion de variables para panel de imagen y texto -------------------
 
 const $ = element => document.querySelector(element)
 
@@ -23,8 +42,6 @@ const $topText =$("#top-text")
 const $bottomText =$("#bottom-text")
 const $memeContainer = $("#meme-container")
 const $buttonDownload = $(".button-download-style")
-
-
 
 //---------------------------- input ingresar imagen --------------------------------- -------------------
 
@@ -92,7 +109,7 @@ $inputSaturacion.addEventListener("input", () => {
 
 $inputNegativo.addEventListener("input", () => {
     console.log ($inputNegativo.value)
-    $imgContainer.style.filter = `invert(${$inputNegativo.value})`
+    $imgContainer.style.filter = `saturate(${$inputNegativo.value})`
 })
 
 // ------------------------codigo para descargar imagen---------------------------
@@ -148,6 +165,7 @@ function reestablecerValores() {
     $inputHue.value = "0"
     $inputSaturacion.value = "100"
     $inputNegativo.value = "1"
+    $colorValue.innerText = "#000000"
 }
 
 reestablecerValores()

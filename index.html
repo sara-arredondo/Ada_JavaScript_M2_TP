@@ -11,14 +11,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
-<body>
+<body class="modo-claro">
     <header>
         <h1>Generador de memes</h1>
         <img class="divider" src="./style/svg/Recurso 1.svg" alt="">
         <div id="button-menu">
             <button class="button-menu-style">Imagen</button>
             <button class="button-menu-style">Texto</button>
-            <button class="button-menu-style">Modo Claro</button>
+            <button id="button-oscuro-claro" class="button-menu-style">Modo Claro</button>
         </div>
     </header>
     <main>
@@ -108,9 +108,11 @@
 
                 <button id="reset" class="button-style-aside">Reestablecer Valores</button>
             </form>
+        </div>
+        <div class="panel-ctrl txt">
+            <h2>TEXTO</h2>
         </div>  
     </aside>
-    <aside class="aside text"></aside>
     <script src="./main.js"></script>
 </body>
 </html>
