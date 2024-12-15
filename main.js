@@ -3,21 +3,21 @@ window.onload = () => {
 // ---------------------------inicio codigo modo claro y modo oscuro---------------------------------------
 
 const $body = document.querySelector("body")
+const $modoClaroOscuro = document.querySelector("#button-oscuro-claro");
 
-if($body.classList.contains("modo-claro")) {
-    $body.classList.remove("modo-claro")
-    $body.classList.add("modo-oscuro")
-} else {
-    $body.classList.remove("modo-oscuro")
-    $body.classList.add("modo-claro")
+function cambioModoClaro () {
+    if($body.classList.contains("modo-claro")) {
+        $body.classList.remove("modo-claro")
+        $body.classList.add("modo-oscuro")
+    } else {
+        $body.classList.remove("modo-oscuro")
+        $body.classList.add("modo-claro")
+    }
 }
 
+cambioModoClaro ()
 
-///$modoClaroOscuro.addEventListener("click", () => {
-    
-//})
-
-
+$modoClaroOscuro.addEventListener("click", cambioModoClaro)
 
 // ------------------ definicion de variables para panel de imagen y texto -------------------
 
