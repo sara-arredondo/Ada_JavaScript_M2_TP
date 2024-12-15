@@ -1,5 +1,12 @@
 window.onload = () => {
 
+// ---------------------------inicio codigo modo panel de texto---------------------------------------
+
+const $aside = document.querySelector("aside")
+const $cambiarPanelTxt = document.querySelector("#button-txt")
+
+
+    
 // ---------------------------inicio codigo modo claro y modo oscuro---------------------------------------
 
 const $body = document.querySelector("body")

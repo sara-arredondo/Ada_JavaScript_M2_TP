@@ -16,8 +16,8 @@
         <h1>Generador de memes</h1>
         <img class="divider" src="./style/svg/Recurso 1.svg" alt="">
         <div id="button-menu">
-            <button class="button-menu-style">Imagen</button>
-            <button class="button-menu-style">Texto</button>
+            <button id="button-img" class="button-menu-style">Imagen</button>
+            <button id="button-txt" class="button-menu-style">Texto</button>
             <button id="button-oscuro-claro" class="button-menu-style">Modo Claro</button>
         </div>
     </header>
@@ -32,7 +32,7 @@
         </section>       
     </main>
     <aside class="aside image">
-        <div class="panel-ctrl">
+        <div id="panel-ctrl-img" class="panel-ctrl">
             <h2>IMAGEN</h2>
             <form action="">
 
@@ -109,8 +109,66 @@
                 <button id="reset" class="button-style-aside">Reestablecer Valores</button>
             </form>
         </div>
-        <div class="panel-ctrl txt">
+        <div id="panel-ctrl-text" class="panel-ctrl">
             <h2>TEXTO</h2>
+            <form action="">
+                <div>
+                    <label for="">TEXTO SUPERIOR</label>
+                    <input type="text">
+
+                    <label for="">Sin texto superior</label>
+                    <input type="radio">
+
+                </div>
+                    <label for="">TEXTO INFERIOR</label>
+                    <input type="text">
+
+                    <label for="">Sin texto INFERIOR</label>
+                    <input type="radio">
+
+                <div>
+                    <label>FUENTE</label>
+                    <select name="font-family" id="font-family">
+                        <option value="">Arial</option>
+                        <option value="">Montserrat</option>
+                    </select>
+                </div>
+
+                <div>
+                    <input type="number">
+                    <input type="button">
+                    <input type="button">
+                    <input type="button">
+                </div>
+
+                <div>
+                    <label for="">COLOR TEXTO</label>
+                    <input type="color">
+
+                    <label for="">COLOR FONDO</label>
+                    <input type="color">
+
+                    <label for="">Fondo transparente</label>
+                    <input type="radio">
+                </div>
+
+                <div>
+                    <label for="">CONTORNO</label>
+                    <input type="button">
+                    <input type="button">
+                    <input type="button">
+                </div>
+
+                <div>
+
+                    <label for="">CONTORNO</label>
+                    <input type="number">
+
+                    <label for="">ESPACIADO</label>
+                    <input type="number">
+                </div>
+            </form>
+
         </div>  
     </aside>
     <script src="./main.js"></script>
