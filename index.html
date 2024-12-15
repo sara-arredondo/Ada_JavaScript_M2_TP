@@ -31,7 +31,7 @@
             <button class="button-download-style">DESCARGAR IMAGEN</button>
         </section>       
     </main>
-    <aside class="aside image">
+    <aside class="aside">
         <div id="panel-ctrl-img" class="panel-ctrl">
             <h2>IMAGEN</h2>
             <form action="">
@@ -112,30 +112,36 @@
         <div id="panel-ctrl-text" class="panel-ctrl">
             <h2>TEXTO</h2>
             <form action="">
-                <div>
+                <div class="container-input">
                     <label for="">TEXTO SUPERIOR</label>
-                    <input type="text">
+                    <input class="input-text" type="text">
+                </div>
 
+                <div>
                     <label for="">Sin texto superior</label>
                     <input type="radio">
-
                 </div>
-                    <label for="">TEXTO INFERIOR</label>
-                    <input type="text">
 
-                    <label for="">Sin texto INFERIOR</label>
-                    <input type="radio">
-
+                <div class="container-input">
+                    <label for="">TEXTO SUPERIOR</label>
+                    <input class="input-text" type="text">  
+                </div>
+                    
                 <div>
+                    <label for="">Sin texto inferior</label>
+                    <input type="radio">
+                </div>
+
+                <div class="container-input">
                     <label>FUENTE</label>
-                    <select name="font-family" id="font-family">
+                    <select class="select-font-style" name="font-family" id="font-family">
                         <option value="">Arial</option>
                         <option value="">Montserrat</option>
                     </select>
                 </div>
 
                 <div>
-                    <input type="number">
+                    <input class="input-text" type="number">
                     <input type="button">
                     <input type="button">
                     <input type="button">
@@ -160,7 +166,6 @@
                 </div>
 
                 <div>
-
                     <label for="">CONTORNO</label>
                     <input type="number">
 

@@ -170,7 +170,7 @@ body .aside label {
     font-size: 18px;
 }
 
-body .aside .panel-ctrl .input-text {
+body .aside .input-text {
     height: 20px;
     border-radius: 25px;
     background-color: var(--colorInput);
@@ -257,4 +257,13 @@ body .aside .panel-ctrl .button-style-aside {
 body .aside .panel-ctrl .button-style-aside:hover {
     background-color: #FE6C3B;
     color: #F5EDE2;
+}
+
+body .aside #panel-ctrl-text form div .select-font-style {
+    background-color: var(--colorInput);
+    height: 40px;
+    border-radius: 25px;
+    border-color: #FE6C3B;
+    padding-left: 15px;
+    padding-right: 15px;
 }
