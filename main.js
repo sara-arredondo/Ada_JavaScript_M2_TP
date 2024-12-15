@@ -67,7 +67,7 @@ $inputConstraste.addEventListener("input", () => {
 
 $inputDesenfoque.addEventListener("input", () => {
     console.log ($inputDesenfoque.value)
-    $imgContainer.style.filter = `blur(${$inputDesenfoque.value})`
+    $imgContainer.style.filter = `blur(${$inputDesenfoque.value}px)`
 })
 
 $inputGrises.addEventListener("input", () => {
@@ -75,6 +75,25 @@ $inputGrises.addEventListener("input", () => {
     $imgContainer.style.filter = `grayscale(${$inputGrises.value})`
 })
 
+$inputSepia.addEventListener("input", () => {
+    console.log ($inputSepia.value)
+    $imgContainer.style.filter = `sepia(${$inputSepia.value})`
+})
+
+$inputHue.addEventListener("input", () => {
+    console.log ($inputHue.value)
+    $imgContainer.style.filter = `hue-rotate(${$inputHue.value}deg)`
+})
+
+$inputSaturacion.addEventListener("input", () => {
+    console.log ($inputSaturacion.value)
+    $imgContainer.style.filter = `saturate(${$inputSaturacion.value})`
+})
+
+$inputNegativo.addEventListener("input", () => {
+    console.log ($inputNegativo.value)
+    $imgContainer.style.filter = `invert(${$inputNegativo.value})`
+})
 
 // ------------------------codigo para descargar imagen---------------------------
 
