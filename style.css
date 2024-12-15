@@ -1,9 +1,15 @@
 .modo-claro {
     --colorFondo: #F5EDE2;
+    --colorAzul: #CCDCF6;
+    --colorTxt: #191B1E;
+    --colorInput : #CCDCF6;
 }
 
 .modo-oscuro {
     --colorFondo: #191B1E;
+    --colorAzul: #2a2d31;;
+    --colorTxt: #F5EDE2;
+    --colorInput : #F5EDE2;
 }
 
 body {
@@ -13,9 +19,8 @@ body {
     border: 1px solid #FE6C3B;
 }
 
-
-
 h1 {
+    color: var(--colorTxt);
     font-family: "Poppins", sans-serif;
     font-weight: 800;
     font-size: 50px;
@@ -26,6 +31,7 @@ h1 {
 }
 
 h2 {
+    color: var(--colorTxt);
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-size: 25px;
@@ -35,7 +41,7 @@ h2 {
 body header {
     width: 100%;
     height: 120px;
-    background-color: #CCDCF6;
+    background-color: var(--colorAzul);
     border: 1px solid #FE6C3B;
     display: flex;
     padding: 40px 0px 40px 0px;
@@ -139,7 +145,7 @@ body aside {
     right: 0px;
     top: 0px;
     padding: 50px 30px;
-    background-color: #CCDCF6;
+    background-color: var(--colorAzul);
 }
 
 body .aside .panel-ctrl {
@@ -158,6 +164,7 @@ body .aside .container-input {
 }
 
 body .aside label {
+    color: var(--colorTxt);
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-size: 18px;
@@ -166,7 +173,7 @@ body .aside label {
 body .aside .panel-ctrl .input-text {
     height: 20px;
     border-radius: 25px;
-    background-color: #CCDCF6;
+    background-color: var(--colorInput);
     border: #FE6C3B 1px solid;
     padding: 10px
 }
@@ -195,6 +202,7 @@ body .aside .container-input-color .color-pick.color-pick::-webkit-color-swatch 
 } 
 
 body .aside .container-input-color div span {
+    color: var(--colorTxt);
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     font-size: 18px;
@@ -202,7 +210,7 @@ body .aside .container-input-color div span {
 }
 
 body .aside .container-input-color div select {
-    background-color: #CCDCF6;
+    background-color: var(--colorInput);
     height: 40px;
     border-radius: 25px;
     border-color: #FE6C3B;

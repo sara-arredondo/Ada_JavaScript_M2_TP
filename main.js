@@ -9,9 +9,11 @@ function cambioModoClaro () {
     if($body.classList.contains("modo-claro")) {
         $body.classList.remove("modo-claro")
         $body.classList.add("modo-oscuro")
+        $modoClaroOscuro.innerText = "Modo claro"
     } else {
         $body.classList.remove("modo-oscuro")
         $body.classList.add("modo-claro")
+        $modoClaroOscuro.innerText = "Modo oscuro"
     }
 }
 
