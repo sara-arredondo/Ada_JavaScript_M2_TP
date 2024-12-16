@@ -297,21 +297,21 @@ body .aside #panel-ctrl-txt form .button-align-style {
 
 body .aside #panel-ctrl-txt form .container-align-text #justify-center {
     background-position: center center;
-    background-image: url('./style/svg/center-alignment.svg');
+    background-image: url('./svg/center-alignment.svg');
     background-color: var(--colorInput);
     border: #FE6C3B 1px solid;
 }
 
 body .aside #panel-ctrl-txt form .container-align-text #align-left {
     background-position: center center;
-    background-image: url('./style/svg/justify-left.svg');
+    background-image: url('./svg/justify-left.svg');
     background-color: var(--colorInput);
     border: #FE6C3B 1px solid;
 }
 
 body .aside #panel-ctrl-txt form .container-align-text #align-right {
     background-position: center center;
-    background-image: url('./style/svg/justify-right.svg');
+    background-image: url('./svg/justify-right.svg');
     background-color: var(--colorInput);
     border: #FE6C3B 1px solid;
 }
@@ -324,8 +324,6 @@ body .aside #panel-ctrl-txt form .inputs-color-txt {
 body .aside #panel-ctrl-txt form .button-menu-style {
     width: 30%;
 }
-
-
 
 body .aside #panel-ctrl-txt form .container-buttons-contorno {
     display: flex;

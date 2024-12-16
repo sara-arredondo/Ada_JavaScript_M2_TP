@@ -311,6 +311,7 @@ function reestablecerValores() {
     $imgContainer.style.backgroundColor = "#000000"
     $imgContainer.style.height = "70%" 
     $fontSize.value = "19"
+    $inputInterlineado.value = "1.5"
 }
 
 reestablecerValores()
