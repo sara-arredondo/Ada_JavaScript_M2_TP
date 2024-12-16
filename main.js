@@ -71,6 +71,7 @@ const $inputBottomTxtNone =$("#input-bottomtxt-none")
 const $inputFontFamily =$("#font-family")
 const $inputInterlineado =$("#interlineado")
 const $fontSize = $("#font-size")
+const $inputEspaciado = $("#espaciado")
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -227,6 +228,7 @@ $inputInterlineado.addEventListener("input", () => {
 
 })
 
+
 //---------------------------- input font fmily -----------------------------------------------------
 
 $inputFontFamily.addEventListener("input", () => {
@@ -234,6 +236,7 @@ $inputFontFamily.addEventListener("input", () => {
     $topTxtContainer.style.fontFamily = $inputFontFamily.value
     $bottomTxtContainer.style.fontFamily = $inputFontFamily.value
 })
+
 
 //---------------------------- input cambiar tamano de texto -----------------------------------------------------
 
@@ -243,9 +246,13 @@ $fontSize.addEventListener("input", () => {
     $bottomTxtContainer.style.fontSize = `${$fontSize.value}px`
 })
 
-//---------------------------- input cambiar el contorno del input texto -----------------------------------------------------
 
+//---------------------------- input espaciado -----------------------------------------------------
 
+$inputEspaciado.addEventListener("input", () => {
+    $topTxtContainer.style.letterSpacing = `${$inputEspaciado.value}em`
+    $bottomTxtContainer.style.letterSpacing = `${$inputEspaciado.value}em`
+})
 
 
 // ------------------------codigo para descargar imagen---------------------------
