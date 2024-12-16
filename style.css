@@ -119,22 +119,13 @@ body main section #meme-container .text-style {
     font-weight: 800;
     font-size: 30px;
     text-align: center;
-    height: 15%;
     margin: auto;
     width: 500px;
     padding: 30px;
-    overflow: hidden;
     word-wrap: break-word;
 }
 
 body main section #meme-container #img-container {
-    height: 70%;
-    border: #FE6C3B 1px solid;
-    cursor: pointer;
-}
-
-body main section #meme-container #img-container .img-preview {
-    height: 70%;
     border: #FE6C3B 1px solid;
     cursor: pointer;
 }

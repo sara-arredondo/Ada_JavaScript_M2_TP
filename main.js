@@ -69,6 +69,7 @@ const $bottomTxtContainer =$("#bottom-txt-container")
 const $inputTopTxtNone =$("#input-toptxt-none")
 const $inputBottomTxtNone =$("#input-bottomtxt-none")
 const $inputFontFamily =$("#font-family")
+const $inputInterlineado =$("#interlineado")
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -83,6 +84,7 @@ const $inputFontFamily =$("#font-family")
 $inputUrl.addEventListener("input", () => {
     console.log($inputUrl.value)
     $imgContainer.style.backgroundImage = `url(${$inputUrl.value})`
+    $imgContainer.style.height = "70%"
 })
 
 //------------------------------------------------------------ input seleccionar color --------------------------------- -------------------
@@ -174,27 +176,41 @@ $inputBottomTxt.addEventListener("input", () => {
 $inputTopTxtNone.addEventListener("change", () => {
     if ($inputTopTxtNone.checked) {
         $topTxtContainer.style.display = "none"
+        $imgContainer.style.height = "80%"
     } else {
         $topTxtContainer.style.display = "flex"
         $topTxtContainer.style.justifyContent = "center"
     }  
 })
 
-
 //---------------------------- input sin texto inferior  -----------------------------------------------------
 
 $inputBottomTxtNone.addEventListener("change", () => {
     if ($inputBottomTxtNone.checked) {
         $bottomTxtContainer.style.display = "none"
+        $imgContainer.style.height = "80%"
     } else {
         $bottomTxtContainer.style.display = "flex"
         $bottomTxtContainer.style.justifyContent = "center"
     }  
 })
 
-//---------------------------- input font family  -----------------------------------------------------
 
-$inputFontFamily
+//---------------------------- funcion poner imagen grande -----------------------------------------------------
+
+
+    if ($inputTopTxtNone.checked && $inputBottomTxtNone.checked) {
+        $imgContainer.style.height = "100%"
+        $imgContainer.style.backgroundSize = "cover"
+    }
+
+//---------------------------- input interlineado  -----------------------------------------------------
+
+$inputInterlineado.addEventListener("input", () => {
+    console.log ($inputInterlineado.value)
+    $topTxtContainer.style.lineHeight = `${$inputInterlineado.value}em`
+
+})
 
 // ------------------------codigo para descargar imagen---------------------------
 
@@ -216,6 +232,7 @@ function valoresMin() {
     $inputHue.min = "0"
     $inputSaturacion.min = "100"
     $inputNegativo.min = "0"
+    $inputInterlineado.min = "0"
 }
 
 valoresMin()
@@ -232,6 +249,7 @@ function valoresMax() {
     $inputHue.max = "359"
     $inputSaturacion.max = "1000"
     $inputNegativo.max = "1"
+    $inputInterlineado.max = "2"
 }
 
 valoresMax()
@@ -251,7 +269,9 @@ function reestablecerValores() {
     $inputNegativo.value = "1"
     $colorValue.innerText = "#000000"
     $topTxtContainer.innerText = "TOP TEXT"
-    $bottomTxtContainer.innerText = "BOTTOM TEXT"  
+    $bottomTxtContainer.innerText = "BOTTOM TEXT"
+    $imgContainer.style.backgroundColor = "#000000"
+    $imgContainer.style.height = "70%" 
 }
 
 reestablecerValores()
