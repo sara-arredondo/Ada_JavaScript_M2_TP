@@ -193,26 +193,39 @@ $inputBottomTxtNone.addEventListener("change", () => {
     } else {
         $bottomTxtContainer.style.display = "flex"
         $bottomTxtContainer.style.justifyContent = "center"
-        $topTxtContainer.style.wordBreak = "break-word";
+        $bottomTxtContainer.style.wordBreak = "break-word"
     }  
 })
 
-
 //---------------------------- funcion poner imagen grande -----------------------------------------------------
 
-
+function agrandarImg () {
     if ($inputTopTxtNone.checked && $inputBottomTxtNone.checked) {
+        console.log("Ambos checkboxes están marcados.");
         $imgContainer.style.height = "100%"
         $imgContainer.style.backgroundSize = "cover"
     }
+}
 
-//---------------------------- input interlineado  -----------------------------------------------------
+$inputTopTxtNone.addEventListener("change", agrandarImg)
+$inputBottomTxtNone.addEventListener("change", agrandarImg)
+
+agrandarImg ()
+
+//---------------------------- input interlineado top y bottom -----------------------------------------------------
 
 $inputInterlineado.addEventListener("input", () => {
     console.log ($inputInterlineado.value)
     $topTxtContainer.style.lineHeight = `${$inputInterlineado.value}em`
 
 })
+
+$inputInterlineado.addEventListener("input", () => {
+    console.log ($inputInterlineado.value)
+    $bottomTxtContainer.style.lineHeight = `${$inputInterlineado.value}em`
+
+})
+
 
 // ------------------------codigo para descargar imagen---------------------------
 
