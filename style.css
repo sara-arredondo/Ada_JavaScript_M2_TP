@@ -150,6 +150,7 @@ body aside {
 
 body .aside #panel-ctrl-img {
     display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -158,6 +159,7 @@ body .aside #panel-ctrl-img {
 
 body .aside #panel-ctrl-txt {
     display: none;
+    flex-direction: column;
     width: 100%;
     height: 100vh;
     position: absolute;
