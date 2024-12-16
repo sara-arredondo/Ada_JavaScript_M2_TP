@@ -70,6 +70,7 @@ const $inputTopTxtNone =$("#input-toptxt-none")
 const $inputBottomTxtNone =$("#input-bottomtxt-none")
 const $inputFontFamily =$("#font-family")
 const $inputInterlineado =$("#interlineado")
+const $fontSize = $("#font-size")
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -197,7 +198,7 @@ $inputBottomTxtNone.addEventListener("change", () => {
     }  
 })
 
-//---------------------------- funcion poner imagen grande -----------------------------------------------------
+//---------------------------- funcion para agrandar imagen al 100 -----------------------------------------------------
 
 function agrandarImg () {
     if ($inputTopTxtNone.checked && $inputBottomTxtNone.checked) {
@@ -226,6 +227,20 @@ $inputInterlineado.addEventListener("input", () => {
 
 })
 
+//---------------------------- input font fmily -----------------------------------------------------
+
+$inputFontFamily.addEventListener("input", () => {
+    console.log ($inputFontFamily.value)
+    $topTxtContainer.style.fontFamily = $inputFontFamily.value
+    $bottomTxtContainer.style.fontFamily = $inputFontFamily.value
+})
+
+//---------------------------- input cambiar tamano de texto -----------------------------------------------------
+
+$fontSize.addEventListener("input", () => {
+    console.log ($fontSize.value)
+    $topTxtContainer.style.fontSize = `${$fontSize.value}px`
+})
 
 // ------------------------codigo para descargar imagen---------------------------
 
@@ -248,6 +263,7 @@ function valoresMin() {
     $inputSaturacion.min = "100"
     $inputNegativo.min = "0"
     $inputInterlineado.min = "0"
+    $fontSize.min = "10"
 }
 
 valoresMin()
@@ -265,6 +281,7 @@ function valoresMax() {
     $inputSaturacion.max = "1000"
     $inputNegativo.max = "1"
     $inputInterlineado.max = "2"
+    $fontSize.max = "100"
 }
 
 valoresMax()
