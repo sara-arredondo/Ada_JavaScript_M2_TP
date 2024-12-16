@@ -180,6 +180,7 @@ $inputTopTxtNone.addEventListener("change", () => {
     } else {
         $topTxtContainer.style.display = "flex"
         $topTxtContainer.style.justifyContent = "center"
+        $topTxtContainer.style.wordBreak = "break-word";
     }  
 })
 
@@ -192,6 +193,7 @@ $inputBottomTxtNone.addEventListener("change", () => {
     } else {
         $bottomTxtContainer.style.display = "flex"
         $bottomTxtContainer.style.justifyContent = "center"
+        $topTxtContainer.style.wordBreak = "break-word";
     }  
 })
 
