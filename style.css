@@ -151,7 +151,7 @@ body aside {
 body .aside #panel-ctrl-img {
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     height: 100vh;
     position: absolute;
     z-index: 9999;
@@ -160,12 +160,11 @@ body .aside #panel-ctrl-img {
 body .aside #panel-ctrl-txt {
     display: none;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     height: 100vh;
     position: absolute;
     z-index: 9999;
 }
-
 
 body .aside .container-input {
     display: flex;
@@ -201,7 +200,7 @@ body .aside .container-input-color div {
     align-items: center;
 }
 
-body .aside .container-input-color .color-pick {
+body .aside .color-pick {
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -213,7 +212,7 @@ body .aside .color-pick.color-pick::-webkit-color-swatch {
     border-radius: 50%;
 } 
 
-body .aside .container-input-color div span {
+body .aside span {
     color: var(--colorTxt);
     font-family: "Poppins", sans-serif;
     font-weight: 600;
@@ -288,7 +287,7 @@ body .aside #panel-ctrl-txt form div .select-font-style {
 
 body .aside #panel-ctrl-txt form .radio-input .radio-label-style {
     font-family: "Poppins", sans-serif;
-    font-weight: 200;
+    font-weight: 300;
     font-size: 16px;
 }
 
@@ -299,7 +298,7 @@ body .aside #panel-ctrl-txt form .container-align-text {
 
 body .aside #panel-ctrl-txt form .button-align-style {
     width: 13%;
-    border-radius: 50%;
+    border-radius: 20px;
 }
 
 body .aside #panel-ctrl-txt form .container-align-text #justify-center {
@@ -321,4 +320,26 @@ body .aside #panel-ctrl-txt form .container-align-text #align-right {
     background-image: url('./style/svg/justify-right.svg');
     background-color: var(--colorInput);
     border: #FE6C3B 1px solid;
+}
+
+body .aside #panel-ctrl-txt form .inputs-color-txt {
+    display: flex;
+    flex-direction: row;
+}
+
+body .aside #panel-ctrl-txt form .button-menu-style {
+    width: 30%;
+}
+
+body .aside #panel-ctrl-txt form .container-buttons-contorno {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+body .aside #panel-ctrl-txt form .container-color-input-text {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
