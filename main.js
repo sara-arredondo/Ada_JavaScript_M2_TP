@@ -257,18 +257,22 @@ $inputEspaciado.addEventListener("input", () => {
 })
 
 
-//---------------------------- input alienado -----------------------------------------------------
+//---------------------------- input alineado -----------------------------------------------------
 
 $inputJustify.addEventListener("click",() => {
     $topTxtContainer.style.textAlign = "center"
+    $bottomTxtContainer.style.textAlign = "center"
 })
 
 $inputLeft.addEventListener("click",() => {
     $topTxtContainer.style.textAlign = "left"
+    $bottomTxtContainer.style.textAlign = "left"
+
 })
 
 $inputRight.addEventListener("click",() => {
     $topTxtContainer.style.textAlign = "right"
+    $bottomTxtContainer.style.textAlign = "right"
 })
 
 // ------------------------codigo para descargar imagen---------------------------
