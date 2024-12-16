@@ -136,7 +136,6 @@ body main section #meme-container #img-container .img-preview {
     cursor: pointer;
 }
 
-
 body aside {
     position: fixed;
     width: 18%;
@@ -150,6 +149,7 @@ body aside {
 }
 
 body .aside #panel-ctrl-img {
+    display: flex;
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -157,11 +157,13 @@ body .aside #panel-ctrl-img {
 }
 
 body .aside #panel-ctrl-txt {
+    display: none;
     width: 100%;
     height: 100vh;
     position: absolute;
     z-index: 9999;
 }
+
 
 body .aside .container-input {
     display: flex;
@@ -268,12 +270,12 @@ body .aside .panel-ctrl .button-style-aside:hover {
 }
 
 
-body .aside #panel-ctrl-text form {
+body .aside #panel-ctrl-txt form {
     display: flex;
     flex-direction: column;
 }
 
-body .aside #panel-ctrl-text form div .select-font-style {
+body .aside #panel-ctrl-txt form div .select-font-style {
     background-color: var(--colorInput);
     height: 40px;
     border-radius: 25px;
@@ -282,37 +284,37 @@ body .aside #panel-ctrl-text form div .select-font-style {
     padding-right: 15px;
 }
 
-body .aside #panel-ctrl-text form .radio-input .radio-label-style {
+body .aside #panel-ctrl-txt form .radio-input .radio-label-style {
     font-family: "Poppins", sans-serif;
     font-weight: 200;
     font-size: 16px;
 }
 
-body .aside #panel-ctrl-text form .container-align-text {
+body .aside #panel-ctrl-txt form .container-align-text {
     display: flex;
     justify-content: space-between;
 }
 
-body .aside #panel-ctrl-text form .button-align-style {
+body .aside #panel-ctrl-txt form .button-align-style {
     width: 13%;
     border-radius: 50%;
 }
 
-body .aside #panel-ctrl-text form .container-align-text #justify-center {
+body .aside #panel-ctrl-txt form .container-align-text #justify-center {
     background-position: center center;
     background-image: url('./style/svg/center-alignment.svg');
     background-color: var(--colorInput);
     border: #FE6C3B 1px solid;
 }
 
-body .aside #panel-ctrl-text form .container-align-text #align-left {
+body .aside #panel-ctrl-txt form .container-align-text #align-left {
     background-position: center center;
     background-image: url('./style/svg/justify-left.svg');
     background-color: var(--colorInput);
     border: #FE6C3B 1px solid;
 }
 
-body .aside #panel-ctrl-text form .container-align-text #align-right {
+body .aside #panel-ctrl-txt form .container-align-text #align-right {
     background-position: center center;
     background-image: url('./style/svg/justify-right.svg');
     background-color: var(--colorInput);

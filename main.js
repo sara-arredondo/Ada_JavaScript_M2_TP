@@ -1,12 +1,23 @@
 window.onload = () => {
 
-// ---------------------------inicio codigo modo panel de texto---------------------------------------
+// ---------------------------inicio codigo modo panel de intercambio de paneles ---------------------------------------
 
-const $aside = document.querySelector("aside")
-const $cambiarPanelTxt = document.querySelector("#button-txt")
+const $buttonTxt = document.querySelector("#button-txt")
+const $buttonImg = document.querySelector("#button-img")
+const $panelImg = document.querySelector("#panel-ctrl-img")
+const $panelTxt = document.querySelector("#panel-ctrl-txt")
+
+$buttonImg.addEventListener("click", () => {
+    $panelTxt.style.display = "none"
+    $panelImg.style.display = "flex"
+})
+
+$buttonTxt.addEventListener("click", () => {
+    $panelImg.style.display = "none"
+    $panelTxt.style.display = "flex"
+})
 
 
-    
 // ---------------------------inicio codigo modo claro y modo oscuro---------------------------------------
 
 const $body = document.querySelector("body")
@@ -175,6 +186,8 @@ function reestablecerValores() {
     $inputSaturacion.value = "100"
     $inputNegativo.value = "1"
     $colorValue.innerText = "#000000"
+    $panelTxt.display = "none"
+    
 }
 
 reestablecerValores()
