@@ -67,6 +67,7 @@ const $topTxtContainer =$("#top-txt-container")
 const $inputBottomTxt =$("#input-bottom-txt")
 const $bottomTxtContainer =$("#bottom-txt-container")
 const $inputTopTxtNone =$("#input-toptxt-none")
+const $inputBottomTxtNone =("#input-bottomtxt-none")
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -174,9 +175,13 @@ $inputTopTxtNone.addEventListener("change", () => {
         $topTxtContainer.style.display = "none"
     } else {
         $topTxtContainer.style.display = "flex"
-        $topTxtContainer.style.justifyContente = "center"
+        $topTxtContainer.style.justifyContent = "center"
     }  
 })
+
+
+//---------------------------- input sin texto inferior  -----------------------------------------------------
+
 
 
 // ------------------------codigo para descargar imagen---------------------------

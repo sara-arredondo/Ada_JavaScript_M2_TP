@@ -288,7 +288,7 @@ body .aside #panel-ctrl-txt form div .select-font-style {
     padding-right: 15px;
 }
 
-body .aside #panel-ctrl-txt form .radio-input .radio-label-style {
+body .aside #panel-ctrl-txt form .check-input .check-label-style {
     font-family: "Poppins", sans-serif;
     font-weight: 300;
     font-size: 16px;
