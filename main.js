@@ -68,6 +68,7 @@ const $inputBottomTxt =$("#input-bottom-txt")
 const $bottomTxtContainer =$("#bottom-txt-container")
 const $inputTopTxtNone =$("#input-toptxt-none")
 const $inputBottomTxtNone =$("#input-bottomtxt-none")
+const $inputFontFamily =$("#font-family")
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -143,7 +144,7 @@ $inputSaturacion.addEventListener("input", () => {
 
 $inputNegativo.addEventListener("input", () => {
     console.log ($inputNegativo.value)
-    $imgContainer.style.filter = `saturate(${$inputNegativo.value})`
+    $imgContainer.style.filter = `invert(${$inputNegativo.value})`
 })
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
@@ -190,6 +191,10 @@ $inputBottomTxtNone.addEventListener("change", () => {
         $bottomTxtContainer.style.justifyContent = "center"
     }  
 })
+
+//---------------------------- input font family  -----------------------------------------------------
+
+$inputFontFamily
 
 // ------------------------codigo para descargar imagen---------------------------
 
