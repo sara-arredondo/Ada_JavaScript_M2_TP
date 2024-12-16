@@ -121,7 +121,10 @@ body main section #meme-container .text-style {
     text-align: center;
     height: 15%;
     margin: auto;
+    width: 500px;
     padding: 30px;
+    overflow: hidden;
+    word-wrap: break-word;
 }
 
 body main section #meme-container #img-container {

@@ -58,10 +58,12 @@ const $inputHue = $("#hue")
 const $inputSaturacion = $("#saturacion")
 const $inputNegativo = $("#negativo")
 const $buttonReset = $("#reset")
-const $topText =$("#top-text")
-const $bottomText =$("#bottom-text")
 const $memeContainer = $("#meme-container")
 const $buttonDownload = $(".button-download-style")
+const $inputTopTxt =$("#input-top-txt")
+const $topTxtContainer =$("#top-txt-container")
+const $inputBottomTxt =$("#input-bottom-txt")
+const $bottomTxtContainer =$("#bottom-txt-container")
 
 //---------------------------- input ingresar imagen --------------------------------- -------------------
 
@@ -132,6 +134,28 @@ $inputNegativo.addEventListener("input", () => {
     $imgContainer.style.filter = `saturate(${$inputNegativo.value})`
 })
 
+///////////////////////////////////////////////////////////////////////////////////////////////////
+
+//------------------------INPUTS PANEL TEXT----------------------------------------------
+
+///////////////////////////////////////////////////////////////////////////////////////////
+
+
+//---------------------------- input ingresar top text --------------------------------- -------------------
+
+$inputTopTxt.addEventListener("input", () => {
+    console.log ($inputTopTxt.value)
+    $topTxtContainer.innerText = $inputTopTxt.value
+})
+
+//---------------------------- input ingresar bottom text --------------------------------- -------------------
+
+$inputBottomTxt.addEventListener("input", () => {
+    console.log ($inputBottomTxt.value)
+    $bottomTxtContainer.innerText = $inputBottomTxt.value
+})
+
+
 // ------------------------codigo para descargar imagen---------------------------
 
 $buttonDownload.addEventListener("click", () => {
@@ -186,7 +210,7 @@ function reestablecerValores() {
     $inputSaturacion.value = "100"
     $inputNegativo.value = "1"
     $colorValue.innerText = "#000000"
-    $panelTxt.display = "none"
+    $topTxtContainer.innerText = "TOP TEXT"
     
 }
 
