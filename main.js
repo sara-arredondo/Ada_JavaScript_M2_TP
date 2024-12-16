@@ -72,7 +72,9 @@ const $inputFontFamily =$("#font-family")
 const $inputInterlineado =$("#interlineado")
 const $fontSize = $("#font-size")
 const $inputEspaciado = $("#espaciado")
-
+const $inputJustify = $("#input-justify")
+const $inputLeft = $("#input-left")
+const $inputRight =$("#input-right")
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -254,6 +256,20 @@ $inputEspaciado.addEventListener("input", () => {
     $bottomTxtContainer.style.letterSpacing = `${$inputEspaciado.value}em`
 })
 
+
+//---------------------------- input alienado -----------------------------------------------------
+
+$inputJustify.addEventListener("click",() => {
+    $topTxtContainer.style.textAlign = "center"
+})
+
+$inputLeft.addEventListener("click",() => {
+    $topTxtContainer.style.textAlign = "left"
+})
+
+$inputRight.addEventListener("click",() => {
+    $topTxtContainer.style.textAlign = "right"
+})
 
 // ------------------------codigo para descargar imagen---------------------------
 

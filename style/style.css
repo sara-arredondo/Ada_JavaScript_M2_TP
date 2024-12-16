@@ -295,21 +295,21 @@ body .aside #panel-ctrl-txt form .button-align-style {
     border-radius: 20px;
 }
 
-body .aside #panel-ctrl-txt form .container-align-text #justify-center {
+body .aside #panel-ctrl-txt form .container-align-text #input-justify {
     background-position: center center;
     background-image: url('./svg/center-alignment.svg');
     background-color: var(--colorInput);
     border: #FE6C3B 1px solid;
 }
 
-body .aside #panel-ctrl-txt form .container-align-text #align-left {
+body .aside #panel-ctrl-txt form .container-align-text #input-left {
     background-position: center center;
     background-image: url('./svg/justify-left.svg');
     background-color: var(--colorInput);
     border: #FE6C3B 1px solid;
 }
 
-body .aside #panel-ctrl-txt form .container-align-text #align-right {
+body .aside #panel-ctrl-txt form .container-align-text #input-right {
     background-position: center center;
     background-image: url('./svg/justify-right.svg');
     background-color: var(--colorInput);
