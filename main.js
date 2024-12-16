@@ -184,6 +184,4 @@ $buttonReset.addEventListener("click", reestablecerValores)
 
 // --------------------  fin codigo para funcion de reestablecer valores----------------------------
 
-
-
 }

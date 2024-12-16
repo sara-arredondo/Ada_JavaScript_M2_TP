@@ -197,7 +197,7 @@ body .aside .container-input-color .color-pick {
     width: 50px;
 } 
 
-body .aside .container-input-color .color-pick.color-pick::-webkit-color-swatch {
+body .aside .color-pick.color-pick::-webkit-color-swatch {
     border-radius: 50%;
 } 
 
@@ -259,6 +259,12 @@ body .aside .panel-ctrl .button-style-aside:hover {
     color: #F5EDE2;
 }
 
+
+body .aside #panel-ctrl-text form {
+    display: flex;
+    flex-direction: column;
+}
+
 body .aside #panel-ctrl-text form div .select-font-style {
     background-color: var(--colorInput);
     height: 40px;
@@ -266,4 +272,41 @@ body .aside #panel-ctrl-text form div .select-font-style {
     border-color: #FE6C3B;
     padding-left: 15px;
     padding-right: 15px;
+}
+
+body .aside #panel-ctrl-text form .radio-input .radio-label-style {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+}
+
+body .aside #panel-ctrl-text form .container-align-text {
+    display: flex;
+    justify-content: space-between;
+}
+
+body .aside #panel-ctrl-text form .button-align-style {
+    width: 13%;
+    border-radius: 50%;
+}
+
+body .aside #panel-ctrl-text form .container-align-text #justify-center {
+    background-position: center center;
+    background-image: url('./style/svg/center-alignment.svg');
+    background-color: var(--colorInput);
+    border: #FE6C3B 1px solid;
+}
+
+body .aside #panel-ctrl-text form .container-align-text #align-left {
+    background-position: center center;
+    background-image: url('./style/svg/justify-left.svg');
+    background-color: var(--colorInput);
+    border: #FE6C3B 1px solid;
+}
+
+body .aside #panel-ctrl-text form .container-align-text #align-right {
+    background-position: center center;
+    background-image: url('./style/svg/justify-right.svg');
+    background-color: var(--colorInput);
+    border: #FE6C3B 1px solid;
 }

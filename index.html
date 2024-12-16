@@ -54,8 +54,7 @@
                             <option value="luminosity">Luminosidad</option>
                             <option value="multiply">Multiplicar</option>
                         </select>
-                    </div>
-                    
+                    </div> 
                 </div>
 
                 <div class="container-filters">
@@ -112,13 +111,14 @@
         <div id="panel-ctrl-text" class="panel-ctrl">
             <h2>TEXTO</h2>
             <form action="">
+                
                 <div class="container-input">
                     <label for="">TEXTO SUPERIOR</label>
                     <input class="input-text" type="text">
                 </div>
 
-                <div>
-                    <label for="">Sin texto superior</label>
+                <div class="radio-input">
+                    <label class="radio-label-style" for="">Sin texto superior</label>
                     <input type="radio">
                 </div>
 
@@ -127,8 +127,8 @@
                     <input class="input-text" type="text">  
                 </div>
                     
-                <div>
-                    <label for="">Sin texto inferior</label>
+                <div class="radio-input">
+                    <label class="radio-label-style" for="">Sin texto inferior</label>
                     <input type="radio">
                 </div>
 
@@ -140,41 +140,43 @@
                     </select>
                 </div>
 
-                <div>
+                <div class="container-align-text">
                     <input class="input-text" type="number">
-                    <input type="button">
-                    <input type="button">
-                    <input type="button">
+                    <input class="button-align-style" id="justify-center" type="button">
+                    <input class="button-align-style" id="align-left" type="button">
+                    <input class="button-align-style" id="align-right" type="button">
                 </div>
 
                 <div>
                     <label for="">COLOR TEXTO</label>
-                    <input type="color">
+                    <input class="color-pick" type="color">
 
                     <label for="">COLOR FONDO</label>
-                    <input type="color">
+                    <input class="color-pick" type="color">
+                </div>
 
-                    <label for="">Fondo transparente</label>
+                <div class="radio-input">
+                    <label class="radio-label-style" for="">Fondo transparente</label>
                     <input type="radio">
                 </div>
 
                 <div>
                     <label for="">CONTORNO</label>
-                    <input type="button">
-                    <input type="button">
-                    <input type="button">
+                    <input class="button-align-style" type="button">
+                    <input class="button-align-style" type="button">
+                    <input class="button-align-style" type="button">
                 </div>
 
-                <div>
+                <div class="container-input">
                     <label for="">CONTORNO</label>
-                    <input type="number">
+                    <input class="input-text" type="number">
 
                     <label for="">ESPACIADO</label>
-                    <input type="number">
+                    <input class="input-text" type="number">
                 </div>
+          
             </form>
-
-        </div>  
+        </div>
     </aside>
     <script src="./main.js"></script>
 </body>
