@@ -1,6 +1,8 @@
 window.onload = () => {
 
-// ---------------------------inicio codigo modo panel de intercambio de paneles ---------------------------------------
+// ---------------------------------------------inicio codigo modo panel de intercambio de paneles ---------------------------------------------------
+
+//Cuando se presiona el boton del nav texto se ponga en display none el modulo de imagen y se ponga en display flex el modulo texto y al revés.
 
 const $buttonTxt = document.querySelector("#button-txt");
 const $buttonImg = document.querySelector("#button-img");
@@ -18,7 +20,7 @@ $buttonTxt.addEventListener("click", () => {
 })
 
 
-// ---------------------------inicio codigo modo claro y modo oscuro---------------------------------------
+// --------------------------------------------------inicio codigo modo claro y modo oscuro---------------------------------------------------------------
 
 const $body = document.querySelector("body");
 const $modoClaroOscuro = document.querySelector("#button-oscuro-claro");
@@ -39,7 +41,7 @@ cambioModoClaro ()
 
 $modoClaroOscuro.addEventListener("click", cambioModoClaro)
 
-// ------------------ definicion de variables para panel de imagen y texto -------------------
+// -------------------------------------- definicion de variables para panel de imagen y texto ------------------------------------------------------------
 
 const $ = element => document.querySelector(element)
 
@@ -64,15 +66,24 @@ const $inputTopTxt =$("#input-top-txt")
 const $topTxtContainer =$("#top-txt-container")
 const $inputBottomTxt =$("#input-bottom-txt")
 const $bottomTxtContainer =$("#bottom-txt-container")
+const $inputTopTxtNone =$("#input-toptxt-none")
 
-//---------------------------- input ingresar imagen --------------------------------- -------------------
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+//------------------------------------------------------------INPUTS PANEL IMAGEN------------------------------------------------------------------------------
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+//----------------------------------------------------------- input ingresar imagen --------------------------------- -------------------
 
 $inputUrl.addEventListener("input", () => {
     console.log($inputUrl.value)
     $imgContainer.style.backgroundImage = `url(${$inputUrl.value})`
 })
 
-//---------------------------- input seleccionar color --------------------------------- -------------------
+//------------------------------------------------------------ input seleccionar color --------------------------------- -------------------
 
 $inputColor.addEventListener("input", () => {
     $imgContainer.style.backgroundColor = $inputColor.value
@@ -80,14 +91,14 @@ $inputColor.addEventListener("input", () => {
     console.log ($inputColor.value)
 })
 
-//---------------------------- input blend mode --------------------------------- -------------------
+//---------------------------------------------------------------- input blend mode --------------------------------- -------------------
 
 $blendModeSelect.addEventListener("input", () => {
     console.log ($blendModeSelect.value)
     $imgContainer.style.backgroundBlendMode = $blendModeSelect.value
 })
    
-//---------------------------- inputs filtros --------------------------------- -------------------
+//------------------------------------------------------------------- inputs filtros --------------------------------- -------------------
 
 $inputBrillo.addEventListener("input", () => {
     console.log ($inputBrillo.value)
@@ -156,6 +167,18 @@ $inputBottomTxt.addEventListener("input", () => {
 })
 
 
+//---------------------------- input sin texto superior  -----------------------------------------------------
+
+$inputTopTxtNone.addEventListener("change", () => {
+    if ($inputTopTxtNone.checked) {
+        $topTxtContainer.style.display = "none"
+    } else {
+        $topTxtContainer.style.display = "flex"
+        $topTxtContainer.style.justifyContente = "center"
+    }  
+})
+
+
 // ------------------------codigo para descargar imagen---------------------------
 
 $buttonDownload.addEventListener("click", () => {
@@ -211,7 +234,7 @@ function reestablecerValores() {
     $inputNegativo.value = "1"
     $colorValue.innerText = "#000000"
     $topTxtContainer.innerText = "TOP TEXT"
-    
+    $bottomTxtContainer.innerText = "BOTTOM TEXT"  
 }
 
 reestablecerValores()
