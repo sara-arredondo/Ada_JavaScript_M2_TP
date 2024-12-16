@@ -2,36 +2,36 @@ window.onload = () => {
 
 // ---------------------------inicio codigo modo panel de intercambio de paneles ---------------------------------------
 
-const $buttonTxt = document.querySelector("#button-txt")
-const $buttonImg = document.querySelector("#button-img")
-const $panelImg = document.querySelector("#panel-ctrl-img")
-const $panelTxt = document.querySelector("#panel-ctrl-txt")
+const $buttonTxt = document.querySelector("#button-txt");
+const $buttonImg = document.querySelector("#button-img");
+const $panelImg = document.querySelector("#panel-ctrl-img");
+const $panelTxt = document.querySelector("#panel-ctrl-txt");
 
 $buttonImg.addEventListener("click", () => {
-    $panelTxt.style.display = "none"
-    $panelImg.style.display = "flex"
+    $panelTxt.style.display = "none";
+    $panelImg.style.display = "flex";
 })
 
 $buttonTxt.addEventListener("click", () => {
-    $panelImg.style.display = "none"
-    $panelTxt.style.display = "flex"
+    $panelImg.style.display = "none";
+    $panelTxt.style.display = "flex";
 })
 
 
 // ---------------------------inicio codigo modo claro y modo oscuro---------------------------------------
 
-const $body = document.querySelector("body")
+const $body = document.querySelector("body");
 const $modoClaroOscuro = document.querySelector("#button-oscuro-claro");
 
 function cambioModoClaro () {
     if($body.classList.contains("modo-claro")) {
-        $body.classList.remove("modo-claro")
-        $body.classList.add("modo-oscuro")
-        $modoClaroOscuro.innerText = "Modo claro"
+        $body.classList.remove("modo-claro");
+        $body.classList.add("modo-oscuro");
+        $modoClaroOscuro.innerText = "MODO CLARO";
     } else {
-        $body.classList.remove("modo-oscuro")
-        $body.classList.add("modo-claro")
-        $modoClaroOscuro.innerText = "Modo oscuro"
+        $body.classList.remove("modo-oscuro");
+        $body.classList.add("modo-claro");
+        $modoClaroOscuro.innerText = "MODO OSCURO";
     }
 }
 
