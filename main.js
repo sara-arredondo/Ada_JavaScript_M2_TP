@@ -240,7 +240,13 @@ $inputFontFamily.addEventListener("input", () => {
 $fontSize.addEventListener("input", () => {
     console.log ($fontSize.value)
     $topTxtContainer.style.fontSize = `${$fontSize.value}px`
+    $bottomTxtContainer.style.fontSize = `${$fontSize.value}px`
 })
+
+//---------------------------- input cambiar el contorno del input texto -----------------------------------------------------
+
+
+
 
 // ------------------------codigo para descargar imagen---------------------------
 
@@ -304,6 +310,7 @@ function reestablecerValores() {
     $bottomTxtContainer.innerText = "BOTTOM TEXT"
     $imgContainer.style.backgroundColor = "#000000"
     $imgContainer.style.height = "70%" 
+    $fontSize.value = "19"
 }
 
 reestablecerValores()
