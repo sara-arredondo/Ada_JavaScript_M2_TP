@@ -134,6 +134,7 @@ body main section #meme-container .text-style {
 body main section #meme-container #img-container {
     border: #FE6C3B 1px solid;
     cursor: pointer;
+    background-size: cover;
 }
 
 body aside {

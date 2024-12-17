@@ -411,8 +411,8 @@ window.onload = () => {
             $bottomTxtContainer.style.display = "none"
             $imgContainer.style.height = "80%"
         } else {
-            $bottomTxtContainer.style.display = "flex"
-            $topTxtContainer.style.justifyContent = "center"
+            $bottomTxtContainer.style.display = ""
+            //$bottomTxtContainer.style.justifyContent = "center"
             $bottomTxtContainer.style.wordBreak = "break-word"
             $bottomTxtContainer.innerText = "BOTTOM TEXT"
         }
@@ -423,8 +423,8 @@ window.onload = () => {
             $topTxtContainer.style.display = "none"
             $imgContainer.style.height = "80%"
         } else {
-            $topTxtContainer.style.display = "flex"
-            $topTxtContainer.style.justifyContent = "center"
+            $topTxtContainer.style.display = ""
+           // $topTxtContainer.style.justifyContent = "center"
             $topTxtContainer.style.wordBreak = "break-word";
             $topTxtContainer.innerText = "TOP TEXT"
         }
