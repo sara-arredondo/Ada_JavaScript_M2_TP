@@ -198,6 +198,7 @@ body .aside .container-input-color {
 body .aside .container-input-color div {
     display: flex;
     align-items: center;
+    
 }
 
 body .aside .color-pick {
@@ -206,9 +207,12 @@ body .aside .color-pick {
     cursor: pointer;
     height: 50px;
     width: 50px;
+    
 } 
 
 body .aside .color-pick.color-pick::-webkit-color-swatch {
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
 } 
 
@@ -217,7 +221,8 @@ body .aside span {
     font-family: "Poppins", sans-serif;
     font-weight: 400;
     font-size: 16px;
-    margin-right: 30px;
+    margin-right: 10px;
+    margin-left: 10px;
 }
 
 body .aside .container-input-color div select {
@@ -360,13 +365,19 @@ body .aside #panel-ctrl-txt form .container-buttons-contorno {
 body .aside #panel-ctrl-txt form .container-color-input-text {
     margin-top: 40px;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
+    width: 100%;
+    align-items: center;
 }
 
-body .aside #panel-ctrl-txt form .container-color-input-text .row-style {
+body .aside #panel-ctrl-txt form .row-style {
     display: flex;
+    flex-direction: row;
     align-items: center;
+    padding: 2px 5px 2px 5px;
+    border-radius: 30px;
+    border: #FE6C3B 1px solid;
+    width: 50%;
 }
 
 
