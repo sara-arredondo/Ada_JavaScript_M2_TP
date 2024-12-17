@@ -185,6 +185,7 @@ $inputTopTxtNone.addEventListener("change", () => {
         $topTxtContainer.style.display = "flex"
         $topTxtContainer.style.justifyContent = "center"
         $topTxtContainer.style.wordBreak = "break-word";
+        $topTxtContainer.innerText = "TOP TEXT"
     }  
 })
 
@@ -198,6 +199,7 @@ $inputBottomTxtNone.addEventListener("change", () => {
         $bottomTxtContainer.style.display = "flex"
         $bottomTxtContainer.style.justifyContent = "center"
         $bottomTxtContainer.style.wordBreak = "break-word"
+        $bottomTxtContainer.innerText = "BOTTOM TEXT"
     }  
 })
 
@@ -239,6 +241,9 @@ $inputFontFamily.addEventListener("input", () => {
     $bottomTxtContainer.style.fontFamily = $inputFontFamily.value
 })
 
+//---------------------------- inputs contorno -----------------------------------------------------
+
+
 
 //---------------------------- input cambiar tamano de texto -----------------------------------------------------
 
@@ -257,25 +262,34 @@ $inputEspaciado.addEventListener("input", () => {
 })
 
 
-//---------------------------- input alineado -----------------------------------------------------
+//---------------------------- funcion de alineado de texto  -----------------------------------------------------
+// codigo anterior 
+//$inputJustify.addEventListener("click",() => {
+//   $topTxtContainer.style.textAlign = "center"
+//  $bottomTxtContainer.style.textAlign = "center"
+//})
+
+//$inputLeft.addEventListener("click",() => {
+//    $topTxtContainer.style.textAlign = "left"
+//    $bottomTxtContainer.style.textAlign = "left"
+
+//})
+
+//$inputRight.addEventListener("click",() => {
+//    $topTxtContainer.style.textAlign = "right"
+//    $bottomTxtContainer.style.textAlign = "right"
+//})
 
 
+function textAlign(alignment) {
+    $topTxtContainer.style.textAlign = alignment;
+    $bottomTxtContainer.style.textAlign = alignment;
+}
 
-$inputJustify.addEventListener("click",() => {
-    $topTxtContainer.style.textAlign = "center"
-    $bottomTxtContainer.style.textAlign = "center"
-})
-
-$inputLeft.addEventListener("click",() => {
-    $topTxtContainer.style.textAlign = "left"
-    $bottomTxtContainer.style.textAlign = "left"
-
-})
-
-$inputRight.addEventListener("click",() => {
-    $topTxtContainer.style.textAlign = "right"
-    $bottomTxtContainer.style.textAlign = "right"
-})
+// asigno eventos a los botones
+$inputJustify.addEventListener("click", () => textAlign("center"));
+$inputLeft.addEventListener("click", () => textAlign("left"));
+$inputRight.addEventListener("click", () => textAlign("right"));
 
 // ------------------------codigo para descargar imagen---------------------------
 
