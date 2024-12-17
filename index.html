@@ -3,31 +3,198 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.0/FileSaver.min.js" integrity="sha512-csNcFYJniKjJxRWRV1R7fvnXrycHP6qDR21mgz1ZP55xY5d+aHLfo9/FcGDQLfn2IfngbAHd8LdfsagcCqgTcQ==" crossorigin="anonymous"></script>
     <title>Generador de Memes</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Borel&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/style.css">
 </head>
-<body>
+<body class="modo-oscuro">
     <header>
-        <h1></h1>
-        <div>
-            <button>Imagen</button>
-            <button>Texto</button>
-            <button>Modo Oscuro</button>
+        <h1>Generador de memes</h1>
+        <img class="divider" src="./style/svg/Recurso 1.svg" alt="decorative">
+        <div id="button-menu">
+            <button id="button-img" class="button-menu-style">IMAGEN</button>
+            <button id="button-txt" class="button-menu-style">TEXTO</button>
+            <button id="button-oscuro-claro" class="button-menu-style">MODO CLARO</button>
         </div>
     </header>
     <main>
         <section>
-            <div></div>
-            <button></button>
-        </section>
-        <aside id="imagen">
-            <h2>IMAGEN</h2>
-            <div>
-                <form action=""></form>
+            <div id="meme-container">
+                <h4 id="top-txt-container" class="text-style"></h4>               
+                <div id="img-container"></div>
+                <h4 id="bottom-txt-container" class="text-style"></h4>
             </div>
-        </aside>
-        <aside id="text"></aside>
+            <button class="button-download-style">DESCARGAR IMAGEN</button>
+        </section>       
     </main>
-    <script></script>
+    <aside class="aside">
+        <div id="panel-ctrl-img" class="panel-ctrl">
+            <h2>IMAGEN</h2>
+            <form action="">
+
+                <div class="container-input">
+                    <label>URL</label>
+                    <input class="input-text" id="url" name="url" type="url" placeholder="escriba acá la url de la imagen"/>
+                </div>
+
+                <div class="container-input-color">
+                    <label>FONDO</label>
+                    <div>
+                        <input class="color-pick" id="color" name="color" type="color"/>
+                        <span id="color-value"></span>
+                        <select name="blend-mode-select" id="blend-mode-select">
+                            <option value="normal">Ninguno</option>
+                            <option value="lighten">Aclarar</option>
+                            <option value="darken">Oscurecer</option>
+                            <option value="difference">Diferencia</option>
+                            <option value="luminosity">Luminosidad</option>
+                            <option value="multiply">Multiplicar</option>
+                        </select>
+                    </div> 
+                </div>
+
+                <div class="container-filters">
+
+                    <div class="style-filters">
+                        <label for="">BRILLO</label>
+                        <input value="brightness" class="style-range" id="brillo" type="range" name="brillo" id="brillo" min="0" max="1" step="0.1" value="1">
+                    </div>
+                    
+                    <div class="style-filters">
+                        <label for="">OPACIDAD</label>
+                        <input value="opacity" class="style-range"  id="opacidad" type="range" name="opacidad" id="opacidad" min="0" max="1" step="0.1" value="1">
+                    </div>
+                    
+                    <div class="style-filters">
+                        <label for="">CONTRASTE</label>
+                        <input value="contrast" class="style-range" id="contraste" type="range" name="contraste" id="contraste" min="100" max="1000" step="1" value="100">
+                    </div>
+
+                    <div class="style-filters">
+                        <label for="">DESENFOQUE</label>
+                        <input value="blur" class="style-range" id="desenfoque" type="range" name="desenfoque" id="desenfoque" min="0" max="10" step="0.1" value="0">
+                    </div>
+                    
+                    <div class="style-filters">
+                        <label for="">ESCALA DE GRISES</label>
+                        <input value="grayscale" class="style-range" id="grises" type="range" name="grises" id="grises" min="0" max="100" step="1" value="0">
+                    </div>
+                    
+                    <div class="style-filters">
+                        <label for="">SEPIA</label>
+                        <input value="sepia" class="style-range" id="sepia" type="range" name="sepia" id="sepia" min="0" max="100" step="1" value="0">
+                    </div>
+                   
+                    <div class="style-filters">
+                        <label for="">HUE</label>
+                        <input value="hue-rotate" class="style-range" id="hue" type="range" name="hue" id="hue" min="0" max="359" step="1" value="0">
+                    </div>
+
+                    <div class="style-filters">
+                        <label for="">SATURACION</label>
+                        <input value="saturate" class="style-range" id="saturacion" type="range" name="saturacion" id="saturacion" min="100" max="1000" step="10" value="100">
+                    </div>
+
+                    <div class="style-filters">
+                        <label for="">NEGATIVO</label>
+                        <input value="invert" class="style-range" id="negativo" type="range" name="negativo" id="negativo" min="0" max="1" step="0.1" value="1" >
+                    </div>
+                </div>
+
+                <button id="reset" class="button-style-aside">Restablecer Valores</button>
+            </form>
+        </div>
+        <div id="panel-ctrl-txt" class="panel-ctrl">
+            <h2>TEXTO</h2>
+            <form action="">
+                
+                <div class="container-input">
+                    <label for="">TEXTO SUPERIOR</label>
+                    <input id="input-top-txt" class="input-text" type="text" placeholder="ingrese texto superior">
+                </div>
+
+                <div class="check-input">
+                    <label class="check-label-style" for="input-toptxt-none">Sin texto superior</label>
+                    <input id="input-toptxt-none" type="checkbox">
+                </div>
+
+                <div class="container-input">
+                    <label for="">TEXTO INFERIOR</label>
+                    <input id="input-bottom-txt" class="input-text" type="text" placeholder="ingrese texto inferior">  
+                </div>
+                    
+                <div class="check-input">
+                    <label class="check-label-style" for="">Sin texto inferior</label>
+                    <input id="input-bottomtxt-none" type="checkbox">
+                </div>
+
+                <div class="container-input">
+                    <label>FUENTE</label>
+                    <select class="select-font-style" name="font-family" id="font-family">
+                        <option value="Poppins">Poppins</option>
+                        <option value="Montserrat">Montserrat</option>
+                        <option value="Roboto">Roboto</option>
+                        <option value="Borel">Borel</option>
+                        <option value="Merriweather">Merriweather</option>
+                    </select>
+                </div>
+
+                <div class="container-align-text">
+                    <input id="font-size" class="input-text" type="number">
+                    <input id="input-justify" class="button-align-style" type="button">
+                    <input id="input-left" class="button-align-style"  type="button">
+                    <input id="input-right" class="button-align-style" type="button">
+                </div>
+
+                <div class="container-input-2">
+                    <div class="container-color-input-text">
+                        <label>COLOR TEXTO</label>
+                        <div class="row-style">
+                            <input id="input-color-txt" class="color-pick" type="color">
+                            <span id="color-value-txt"></span>
+                        </div> 
+                    </div>
+                    
+                    <div class="container-color-input-text">
+                        <label for="">COLOR FONDO</label>
+                        <div class="row-style">
+                            <input id="input-color-bg" class="color-pick" type="color">
+                            <span id="color-value-bg"></span>
+                        </div>  
+                    </div>
+                </div>
+
+                <div class="check-input">
+                    <label class="check-label-style" for="">Fondo transparente</label>
+                    <input id="fondo-transparente" type="checkbox">
+                </div>
+
+                <div class="container-input">
+                    <label for="">CONTORNO</label>
+                    <div class="container-buttons-contorno">
+                        <input id="input-ninguno" class="button-txt-contorno" type="button" value="NINGUNO">
+                        <input id="input-claro" class="button-txt-contorno" type="button" value="CLARO">
+                        <input id="input-oscuro" class="button-txt-contorno" type="button" value="OSCURO">
+                    </div>    
+                </div>
+
+                <div class="container-input">
+                    <label for="">INTERLINEADO</label>
+                    <input id="interlineado" class="input-text" type="number" step="0.5">
+                </div>
+                    
+                <div class="container-input">
+                    <label for="">ESPACIADO</label>
+                    <input id="espaciado" class="input-text" type="number" step="0.5">
+                </div>
+
+            </form>
+        </div>
+    </aside>
+    <script src="./main.js"></script>
 </body>
 </html>
