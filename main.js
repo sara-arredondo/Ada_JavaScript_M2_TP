@@ -138,8 +138,11 @@ $inputDesenfoque.addEventListener("input", () => {
 })
 
 $inputGrises.addEventListener("input", () => {
+    const porcentaje = $inputGrises.value; // Obtiene el valor en porcentaje
+    const grises = porcentaje / 100;
+
     console.log ($inputGrises.value)
-    $imgContainer.style.filter = `grayscale(${$inputGrises.value})`
+    $imgContainer.style.filter = `grayscale(${grises})`
 })
 
 $inputSepia.addEventListener("input", () => {
@@ -154,10 +157,10 @@ $inputHue.addEventListener("input", () => {
 
 $inputSaturacion.addEventListener("input", () => {
     const porcentaje = $inputSaturacion.value; // Obtiene el valor en porcentaje
-    const saturacion = porcentaje / 100;      // Convierte el porcentaje al formato de saturación CSS
+    const saturacion = porcentaje / 100;       // Convierte el porcentaje al formato de saturación CSS
 
     console.log ($inputSaturacion.value)
-    
+
     $imgContainer.style.filter = `saturate(${saturacion})`
 })
 
