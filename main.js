@@ -52,7 +52,7 @@ const $colorValue = $("#color-value")
 const $blendModeSelect = $("#blend-mode-select")
 const $inputBrillo = $("#brillo")
 const $inputOpacidad = $("#opacidad")
-const $inputConstraste = $("#contraste")
+const $inputContraste = $("#contraste")
 const $inputDesenfoque = $("#desenfoque")
 const $inputGrises = $("#grises")
 const $inputSepia = $("#sepia")
@@ -117,6 +117,8 @@ $blendModeSelect.addEventListener("input", () => {
    
 //------------------------------------------------------------------- inputs filtros --------------------------------- -------------------
 
+
+/*CODIGO ANTERIOR A TENER LA FUNCION
 $inputBrillo.addEventListener("input", () => {
     console.log ($inputBrillo.value)
     $imgContainer.style.filter = `brightness(${$inputBrillo.value})`
@@ -127,9 +129,12 @@ $inputOpacidad.addEventListener("input", () => {
     $imgContainer.style.filter = `opacity(${$inputOpacidad.value})`
 })
 
-$inputConstraste.addEventListener("input", () => {
-    console.log ($inputConstraste.value)
-    $imgContainer.style.filter = `contrast(${$inputConstraste.value})`
+$inputContraste.addEventListener("input", () => {
+    const porcentaje = $inputContraste.value; // Obtiene el valor en porcentaje
+    const contraste = porcentaje / 100;
+
+    console.log ($inputContraste.value)
+    $imgContainer.style.filter = `contrast(${contraste})`
 })
 
 $inputDesenfoque.addEventListener("input", () => {
@@ -168,6 +173,89 @@ $inputNegativo.addEventListener("input", () => {
     console.log ($inputNegativo.value)
     $imgContainer.style.filter = `invert(${$inputNegativo.value})`
 })
+
+*/
+
+// CODIGO FUNCION SUMAR FILTROS
+
+const filtros = {
+    brillo: "1",
+    opacidad: "1",
+    contraste: "100",
+    desenfoque: "0",
+    grises: "0",
+    sepia: "0",
+    hue: "0",
+    saturacion: "100",
+    negativo: "0"
+};
+
+function sumarFiltros() {
+    // acá creo que estoy concatenando los valores para que se vayan sumando
+    const filtrosAplicados = `
+        brightness(${filtros.brillo})
+        opacity(${filtros.opacidad})
+        contrast(${filtros.contraste}%)
+        blur(${filtros.desenfoque}px)
+        grayscale(${filtros.grises}%)
+        sepia(${filtros.sepia}%)
+        hue-rotate(${filtros.hue}deg)
+        saturate(${filtros.saturacion}%)
+        invert(${filtros.negativo})
+    `;
+
+    // esta linea es en la que aplico los filtros concatenados al contenedor 
+    $imgContainer.style.filter = filtrosAplicados;
+}
+
+// la diferencia con el codigo anterior es que al escuchador de eventos le aplico la función filtros así siempre tendrá
+// los filtros  concatenados y no tengo que hacer la cada vez que que la persona aplique un filtro y esto soluciona 
+// el problema de tenerlo que aplicar en orden para que se sumen
+
+$inputBrillo.addEventListener("input", () => {
+    filtros.brillo = $inputBrillo.value;
+    sumarFiltros();
+});
+
+$inputOpacidad.addEventListener("input", () => {
+    filtros.opacidad = $inputOpacidad.value;
+    sumarFiltros();
+});
+
+$inputContraste.addEventListener("input", () => {
+    filtros.contraste = $inputContraste.value;
+    sumarFiltros();
+});
+
+$inputDesenfoque.addEventListener("input", () => {
+    filtros.desenfoque = $inputDesenfoque.value;
+    sumarFiltros();
+});
+
+$inputGrises.addEventListener("input", () => {
+    filtros.grises = $inputGrises.value;
+    sumarFiltros();
+});
+
+$inputSepia.addEventListener("input", () => {
+    filtros.sepia = $inputSepia.value;
+    sumarFiltros();
+});
+
+$inputHue.addEventListener("input", () => {
+    filtros.hue = $inputHue.value;
+    sumarFiltros();
+});
+
+$inputSaturacion.addEventListener("input", () => {
+    filtros.saturacion = $inputSaturacion.value;
+    sumarFiltros();
+});
+
+$inputNegativo.addEventListener("input", () => {
+    filtros.negativo = $inputNegativo.value;
+    sumarFiltros();
+});
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -348,7 +436,7 @@ $buttonDownload.addEventListener("click", () => {
 function valoresMin() {
     $inputBrillo.min = "0"
     $inputOpacidad.min = "0"
-    $inputConstraste.min = "100"
+    $inputContraste.min = "100"
     $inputDesenfoque.min = "0"
     $inputGrises.min = "0"
     $inputSepia.min = "0"
@@ -367,7 +455,7 @@ valoresMin()
 function valoresMax() {
     $inputBrillo.max = "1"
     $inputOpacidad.max= "1"
-    $inputConstraste.max = "1000"
+    $inputContraste.max = "1000"
     $inputDesenfoque.max = "10"
     $inputGrises.max = "100"
     $inputSepia.max = "100"
@@ -387,7 +475,7 @@ valoresMax()
 function reestablecerValores() {
     $inputBrillo.value = "1"
     $inputOpacidad.value = "1"
-    $inputConstraste.value = "100"
+    $inputContraste.value = "100"
     $inputDesenfoque.value = "0"
     $inputGrises.value = "0"
     $inputSepia.value = "0"
@@ -405,6 +493,18 @@ function reestablecerValores() {
     $colorValueTxt.innerText = "#000000"
     $colorValueBg.innerText = "#000000"
     $colorBackground.value = "#000000"
+
+    filtros.brillo = "1";
+    filtros.opacidad = "1";
+    filtros.contraste = "100";
+    filtros.desenfoque = "0";
+    filtros.grises = "0";
+    filtros.sepia = "0";
+    filtros.hue = "0";
+    filtros.saturacion = "100";
+    filtros.negativo = "0";
+
+    sumarFiltros()
 }
 
 reestablecerValores()
