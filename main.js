@@ -259,6 +259,8 @@ $inputEspaciado.addEventListener("input", () => {
 
 //---------------------------- input alineado -----------------------------------------------------
 
+
+
 $inputJustify.addEventListener("click",() => {
     $topTxtContainer.style.textAlign = "center"
     $bottomTxtContainer.style.textAlign = "center"
@@ -297,6 +299,7 @@ function valoresMin() {
     $inputNegativo.min = "0"
     $inputInterlineado.min = "0"
     $fontSize.min = "10"
+    $inputEspaciado.max = "0"
 }
 
 valoresMin()
@@ -315,6 +318,7 @@ function valoresMax() {
     $inputNegativo.max = "1"
     $inputInterlineado.max = "2"
     $fontSize.max = "100"
+    $inputEspaciado.max = "2"
 }
 
 valoresMax()
@@ -339,6 +343,7 @@ function reestablecerValores() {
     $imgContainer.style.height = "70%" 
     $fontSize.value = "19"
     $inputInterlineado.value = "1.5"
+    $inputEspaciado.value = "0"
 }
 
 reestablecerValores()

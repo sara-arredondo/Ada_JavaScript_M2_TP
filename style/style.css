@@ -67,11 +67,16 @@ body .button-menu-style {
     gap: 50px;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
+    transition: background-color 0.3s ease;
 }
 
 body .button-menu-style:hover {
     background-color: #FE6C3B;
     color: #F5EDE2;
+}
+
+body .button-menu-style:active {
+    background-color: #FE6C3B;
 }
 
 body main {
@@ -107,6 +112,7 @@ body main section .button-download-style {
     font-weight: 600;
     color: #F5EDE2;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 body main section .button-download-style:hover {
@@ -257,6 +263,8 @@ body .aside .panel-ctrl .button-style-aside {
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     margin-top: 50px;
+    transition: background-color 0.3s ease;
+
 }
 
 body .aside .panel-ctrl .button-style-aside:hover {
@@ -293,6 +301,11 @@ body .aside #panel-ctrl-txt form .container-align-text {
 body .aside #panel-ctrl-txt form .button-align-style {
     width: 13%;
     border-radius: 20px;
+    height: 40px;
+    gap: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
 }
 
 body .aside #panel-ctrl-txt form .container-align-text #input-justify {
@@ -302,11 +315,19 @@ body .aside #panel-ctrl-txt form .container-align-text #input-justify {
     border: #FE6C3B 1px solid;
 }
 
+body .aside #panel-ctrl-txt form .container-align-text #input-justify:hover {
+    background-color: #FE6C3B;
+}
+
 body .aside #panel-ctrl-txt form .container-align-text #input-left {
     background-position: center center;
     background-image: url('./svg/justify-left.svg');
     background-color: var(--colorInput);
     border: #FE6C3B 1px solid;
+}
+
+body .aside #panel-ctrl-txt form .container-align-text #input-left:hover {
+    background-color: #FE6C3B;
 }
 
 body .aside #panel-ctrl-txt form .container-align-text #input-right {
@@ -315,6 +336,11 @@ body .aside #panel-ctrl-txt form .container-align-text #input-right {
     background-color: var(--colorInput);
     border: #FE6C3B 1px solid;
 }
+
+body .aside #panel-ctrl-txt form .container-align-text #input-right:hover {
+    background-color: #FE6C3B;
+}
+
 
 body .aside #panel-ctrl-txt form .inputs-color-txt {
     display: flex;
