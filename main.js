@@ -74,7 +74,11 @@ const $fontSize = $("#font-size")
 const $inputEspaciado = $("#espaciado")
 const $inputJustify = $("#input-justify")
 const $inputLeft = $("#input-left")
-const $inputRight =$("#input-right")
+const $inputRight = $("#input-right")
+const $inputNinguno = $("#input-ninguno")
+const $inputClaro = $("#input-claro")
+const $inputOscuro = $("#input-oscuro")
+
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -251,6 +255,20 @@ $fontSize.addEventListener("input", () => {
     console.log ($fontSize.value)
     $topTxtContainer.style.fontSize = `${$fontSize.value}px`
     $bottomTxtContainer.style.fontSize = `${$fontSize.value}px`
+})
+
+//---------------------------- input cambiar contorno -----------------------------------------------------
+
+$inputNinguno.addEventListener("click", () => {
+    $topTxtContainer.style.webkitTextStroke = "0px"
+})
+
+$inputClaro.addEventListener("click", () => {
+    $topTxtContainer.style.webkitTextStroke = "1px #F5EDE2"
+})
+
+$inputOscuro.addEventListener("click", () => {
+    $topTxtContainer.style.webkitTextStroke = "1px #191B1E"   
 })
 
 
