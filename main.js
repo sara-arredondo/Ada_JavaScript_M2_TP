@@ -394,6 +394,8 @@ function reestablecerValores() {
     $fontSize.value = "19"
     $inputInterlineado.value = "1.5"
     $inputEspaciado.value = "0"
+    $colorValueTxt.innerText = "#000000"
+    $colorValueBg.innerText = "#000000"
 }
 
 reestablecerValores()
