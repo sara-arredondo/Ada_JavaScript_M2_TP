@@ -353,7 +353,7 @@ body .aside #panel-ctrl-txt form .inputs-color-txt {
 }
 
 body .aside #panel-ctrl-txt form .button-menu-style {
-    width: 30%;
+    width: 40%;
 }
 
 body .aside #panel-ctrl-txt form .container-buttons-contorno {
@@ -362,8 +362,13 @@ body .aside #panel-ctrl-txt form .container-buttons-contorno {
     justify-content: space-between;
 }
 
+body .aside #panel-ctrl-txt form .container-input-2 {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
 body .aside #panel-ctrl-txt form .container-color-input-text {
-    margin-top: 40px;
+    margin-top: 10px;
     display: flex;
     justify-content: space-between;
     width: 100%;
