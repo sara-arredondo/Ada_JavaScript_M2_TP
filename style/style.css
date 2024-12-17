@@ -364,6 +364,12 @@ body .aside #panel-ctrl-txt form .container-color-input-text {
     justify-content: space-between;
 }
 
+body .aside #panel-ctrl-txt form .container-color-input-text .row-style {
+    display: flex;
+    align-items: center;
+}
+
+
 body .aside #panel-ctrl-txt form .button-txt-contorno {
     height: 40px;
     width: 30%;

@@ -78,6 +78,10 @@ const $inputRight = $("#input-right")
 const $inputNinguno = $("#input-ninguno")
 const $inputClaro = $("#input-claro")
 const $inputOscuro = $("#input-oscuro")
+const $inputColorTxt = $("#input-color-txt")
+const $inputColorBg = $("#color-value-bg")
+const $colorValueTxt = $("#color-value-txt")
+const $colorValueBg = $("#color-value-bg")
 
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -308,6 +312,20 @@ function textAlign(alignment) {
 $inputJustify.addEventListener("click", () => textAlign("center"));
 $inputLeft.addEventListener("click", () => textAlign("left"));
 $inputRight.addEventListener("click", () => textAlign("right"));
+
+// ------------------------codigo para cambiar color texto y fondo texto---------------------------
+
+$inputColorTxt.addEventListener("input", () => {
+    $topTxtContainer.style.color = $inputColorTxt.value
+    $bottomTxtContainer.style.color = $inputColorTxt.value
+    $colorValueTxt.innerText = $inputColorTxt.value
+})
+
+$inputColorBg.addEventListener("input", () => {
+    $bottomTxtContainer.style.backgroundColor = $inputColorBg.value
+    $colorValueBg.innerText = $inputColorBg.value
+})
+
 
 // ------------------------codigo para descargar imagen---------------------------
 
