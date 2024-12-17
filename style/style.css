@@ -215,8 +215,8 @@ body .aside .color-pick.color-pick::-webkit-color-swatch {
 body .aside span {
     color: var(--colorTxt);
     font-family: "Poppins", sans-serif;
-    font-weight: 600;
-    font-size: 18px;
+    font-weight: 400;
+    font-size: 16px;
     margin-right: 30px;
 }
 

@@ -26,14 +26,14 @@ const $body = document.querySelector("body");
 const $modoClaroOscuro = document.querySelector("#button-oscuro-claro");
 
 function cambioModoClaro () {
-    if($body.classList.contains("modo-claro")) {
-        $body.classList.remove("modo-claro");
-        $body.classList.add("modo-oscuro");
-        $modoClaroOscuro.innerText = "MODO CLARO";
-    } else {
+    if($body.classList.contains("modo-oscuro")) {
         $body.classList.remove("modo-oscuro");
         $body.classList.add("modo-claro");
         $modoClaroOscuro.innerText = "MODO OSCURO";
+    } else {
+        $body.classList.remove("modo-claro");
+        $body.classList.add("modo-oscuro");
+        $modoClaroOscuro.innerText = "MODO CLARO";
     }
 }
 
@@ -153,8 +153,12 @@ $inputHue.addEventListener("input", () => {
 })
 
 $inputSaturacion.addEventListener("input", () => {
+    const porcentaje = $inputSaturacion.value; // Obtiene el valor en porcentaje
+    const saturacion = porcentaje / 100;      // Convierte el porcentaje al formato de saturación CSS
+
     console.log ($inputSaturacion.value)
-    $imgContainer.style.filter = `saturate(${$inputSaturacion.value})`
+    
+    $imgContainer.style.filter = `saturate(${saturacion})`
 })
 
 $inputNegativo.addEventListener("input", () => {
@@ -300,6 +304,7 @@ $inputEspaciado.addEventListener("input", () => {
 //    $bottomTxtContainer.style.textAlign = "right"
 //})
 
+// codigo con funcion
 
 function textAlign(alignment) {
     $topTxtContainer.style.textAlign = alignment;
@@ -310,6 +315,7 @@ function textAlign(alignment) {
 $inputJustify.addEventListener("click", () => textAlign("center"));
 $inputLeft.addEventListener("click", () => textAlign("left"));
 $inputRight.addEventListener("click", () => textAlign("right"));
+
 
 // ------------------------codigo para cambiar color texto y fondo texto---------------------------
 
@@ -395,6 +401,7 @@ function reestablecerValores() {
     $inputEspaciado.value = "0"
     $colorValueTxt.innerText = "#000000"
     $colorValueBg.innerText = "#000000"
+    $colorBackground.value = "#000000"
 }
 
 reestablecerValores()
