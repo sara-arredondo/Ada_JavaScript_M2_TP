@@ -61,6 +61,7 @@ body header .divider {
     width: 10%;
     margin-right: 140px;
 }
+
 body header #button-menu {
     width: 30%;
     display: flex;
@@ -160,6 +161,16 @@ body aside {
     border: 1px solid #FE6C3B;
     z-index: 1000; /* Asegura que esté encima de otros elementos */
     box-sizing: border-box; 
+}
+
+body aside::-webkit-scrollbar {
+    width: 15px; /* Ancho de la barra */
+    background-color: var(--colorFondo);
+    border: #FE6C3B 1px solid;/* Fondo del área de la barra */
+}
+
+body aside::-webkit-scrollbar-thumb {
+    background-color:  #FE6C3B/* Color del "pulgar" de la barra */
 }
 
 body .aside .panel-ctrl {
@@ -276,6 +287,8 @@ body .aside .panel-ctrl form .container-filters .style-filters .style-range::-we
 }
 
 body .aside .panel-ctrl form .container-filters .style-filters .style-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
     background: #CCDCF6;
 }
 
